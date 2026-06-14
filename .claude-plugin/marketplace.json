@@ -1155,7 +1155,7 @@
       "author": {
         "name": "jhangyu"
       },
-      "source": "./extended-agent-teams",
+      "source": "./plugins/extended-agent-teams",
       "category": "workflows",
       "license": "MIT"
     }
