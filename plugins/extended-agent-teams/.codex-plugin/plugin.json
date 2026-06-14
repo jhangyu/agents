@@ -1,0 +1,15 @@
+{
+  "name": "extended-agent-teams",
+  "version": "1.0.0",
+  "description": "Extended multi-agent orchestration workflows for review, debugging, feature development, refactoring, tech debt, performance, and systems work.",
+  "skills": "./skills/",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "interface": {
+    "displayName": "Extended Agent Teams",
+    "shortDescription": "Run extended agent-team workflows in Codex using bundled command and agent specs.",
+    "category": "Coding"
+  }
+}

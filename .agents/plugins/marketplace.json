@@ -482,6 +482,18 @@
       "category": "Coding"
     },
     {
+      "name": "extended-agent-teams",
+      "source": {
+        "source": "local",
+        "path": "./plugins/extended-agent-teams"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Coding"
+    },
+    {
       "name": "framework-migration",
       "source": {
         "source": "local",
