@@ -1,0 +1,111 @@
+---
+description: "Launch a multi-reviewer parallel code review with specialized review dimensions and automatic documentation of findings"
+argument-hint: "<target> [--reviewers security,performance,architecture,testing,accessibility] [--base-branch main] [--doc]"
+---
+
+# team-review
+
+Run a parallel code review with each reviewer specialized in a distinct dimension, then consolidate findings and optionally document them.
+
+## Phase 1: Target Resolution
+
+Determine the review scope from the `<target>` argument:
+- **File or directory path**: read the relevant files directly
+- **Git diff**: collect diff against `--base-branch` (default: `main`)
+- **PR number or URL**: fetch PR diff content
+
+Gather the full diff or file content. Display a scope summary to the user:
+- Files in scope
+- Total lines changed (if diff)
+- Review dimensions that will be applied
+
+## Phase 2: Team Spawn
+
+Generate a team name: `review-{timestamp}`.
+
+Spawn agents using Teammate tool `spawnTeam`, then TaskCreate per reviewer.
+
+Default dimensions and agent mapping:
+- `security` → `extended-agent-teams:team-reviewer` with security focus
+- `performance` → `extended-agent-teams:team-reviewer` with performance focus
+- `architecture` → `extended-agent-teams:team-reviewer` with architecture focus
+- `testing` → `extended-agent-teams:team-reviewer` with testing focus
+- `accessibility` → `extended-agent-teams:team-reviewer` with accessibility focus
+
+If `--reviewers` is specified, spawn only the listed dimensions.
+
+Special dimension note: if `refactor` is included in `--reviewers`, spawn `extended-agent-teams:architect-reviewer` instead of `team-reviewer` for that slot.
+
+Always spawn ONE `extended-agent-teams:team-doc-updater`. This agent is active regardless of whether `--doc` is explicitly set. The `--doc` flag only affects whether documentation is written to a persistent file (REVIEW_FINDINGS.md) or surfaced inline in the report only.
+
+Each reviewer task must include:
+- The full diff or file content
+- Their assigned dimension and focus criteria
+- Output format: findings list with `file:line`, severity (Critical/High/Medium/Low), description, and suggested fix
+
+## Phase 3: Monitor and Collect
+
+Use TaskList to track progress of all reviewer tasks.
+Wait for all reviewers to complete.
+Collect all findings reports.
+
+## Phase 4: Consolidation
+
+Deduplicate findings:
+- Group by `file:line` reference
+- If two reviewers flag the same location: merge descriptions, use the **higher** severity of the two
+- Note which dimensions flagged each finding (cross-reference tag)
+
+Organize findings into severity buckets:
+1. Critical
+2. High
+3. Medium
+4. Low
+
+Within each bucket, sort by file path then line number.
+
+Identify cross-dimension findings (same issue caught by multiple reviewers) and mark them with a `[multi]` tag.
+
+## Phase 5: Documentation
+
+Broadcast to `team-doc-updater` with the consolidated findings:
+- Full structured findings list
+- Severity summary counts
+- Scope metadata (target, base-branch, timestamp)
+
+If `--doc` flag is set (or always by default), request `team-doc-updater` to write or update `REVIEW_FINDINGS.md` in the project root with the full report.
+
+This phase runs in parallel with Phase 6 — do not wait for doc completion before presenting the report.
+
+## Phase 6: Report and Cleanup
+
+Present the consolidated review report:
+
+```
+## Code Review: {target}
+Base: {base-branch} | Reviewers: {dimensions} | {timestamp}
+
+### Summary
+Critical: {N} | High: {N} | Medium: {N} | Low: {N}
+
+### Critical Findings
+{file:line} [{dimensions}] — {description}
+  Suggested fix: {fix}
+
+### High Findings
+...
+
+### Medium Findings
+...
+
+### Low Findings
+...
+
+### Docs Updated
+{REVIEW_FINDINGS.md or "inline only" if --doc not set}
+```
+
+Wait for `team-doc-updater` to confirm completion (if writing to file).
+
+Send `shutdown_request` to all team members.
+Call Teammate cleanup to teardown the team.

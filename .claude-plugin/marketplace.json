@@ -702,7 +702,7 @@
     {
       "name": "social-publishing",
       "source": "./plugins/social-publishing",
-      "description": "Schedule and publish social media posts across 13 platforms (X, LinkedIn Profile + Page, Instagram Business + Standalone, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, Pinterest) via SocialClaw — one workspace API key covers everything",
+      "description": "Schedule and publish social media posts across 13 platforms (X, LinkedIn Profile + Page, Instagram Business + Standalone, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, Pinterest) via SocialClaw \u2014 one workspace API key covers everything",
       "version": "1.0.0",
       "author": {
         "name": "ndesv21",
@@ -1147,6 +1147,17 @@
         "multi-agent",
         "dev-workflow"
       ]
+    },
+    {
+      "name": "extended-agent-teams",
+      "description": "Extended multi-agent orchestration with refactor, tech-debt, performance workflows and specialized language agents",
+      "version": "1.0.0",
+      "author": {
+        "name": "jhangyu"
+      },
+      "source": "./extended-agent-teams",
+      "category": "workflows",
+      "license": "MIT"
     }
   ]
 }
