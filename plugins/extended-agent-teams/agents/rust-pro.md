@@ -169,3 +169,7 @@ Expert Rust developer mastering Rust 1.75+ features, advanced type system usage,
 - "Design a plugin system with dynamic loading and type safety"
 - "Implement a custom allocator for a specific use case"
 - "Debug and fix lifetime issues in this complex generic code"
+
+## Language Rule
+
+ALL inter-agent communication — messages to team-lead, progress updates, and TaskUpdate notes — MUST be in **English only**. Never use any other language in agent-to-agent interactions.
