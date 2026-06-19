@@ -451,6 +451,17 @@
       "license": "MIT"
     },
     {
+      "name": "extended-agent-teams",
+      "source": "./plugins/extended-agent-teams",
+      "version": "1.0.1",
+      "description": "Extended multi-agent orchestration with refactor, tech-debt, performance workflows and specialized language agents",
+      "author": {
+        "name": "local",
+        "email": ""
+      },
+      "license": "MIT"
+    },
+    {
       "name": "framework-migration",
       "source": "./plugins/framework-migration",
       "version": "1.3.2",

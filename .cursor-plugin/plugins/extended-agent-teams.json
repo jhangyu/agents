@@ -1,0 +1,11 @@
+{
+  "name": "extended-agent-teams",
+  "displayName": "Extended Agent Teams",
+  "version": "1.0.1",
+  "description": "Extended multi-agent orchestration with refactor, tech-debt, performance workflows and specialized language agents",
+  "author": {
+    "name": "local",
+    "email": ""
+  },
+  "license": "MIT"
+}
