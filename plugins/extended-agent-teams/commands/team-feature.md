@@ -30,9 +30,15 @@ If `--plan-first` is set: present the full decomposition plan (streams, owned fi
 
 If `--branch` is set: note the target branch for all implementation work.
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Phase 3: Team Spawn
 
-Use Teammate tool `spawnTeam` with name derived from feature description or `--branch` value.
+Use the `TeamCreate` tool with `displayMode: "tmux"` to create the team. The tmux display mode enables real-time inter-agent communication and visibility across all team members. Derive the team name from the feature description or `--branch` value.
 
 Spawn the following agents (all using subagent_type prefix `extended-agent-teams:`):
 - ONE `extended-agent-teams:team-lead` — coordinates streams, owns integration files
@@ -118,4 +124,4 @@ Agents: {count} spawned
 ```
 
 Send `shutdown_request` to all team members.
-Call Teammate cleanup to teardown the team.
+Call `TeamDelete` to teardown the team.

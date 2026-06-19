@@ -7,6 +7,12 @@ argument-hint: "<target path or description> [--output roadmap|report|both] [--h
 
 Orchestrate a comprehensive technical debt analysis. Parallel agents scan different debt categories, an architect-reviewer assesses structural impact, and a legacy-modernizer produces a prioritized remediation roadmap. A doc-updater captures the findings into persistent documentation.
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Pre-flight Checks
 
 1. Verify `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set
@@ -102,4 +108,4 @@ Estimated total remediation effort: {N} days
 ## Phase 6: Cleanup
 
 1. Send `shutdown_request` to all teammates
-2. Call `Teammate` cleanup
+2. Call `TeamDelete` to teardown the team

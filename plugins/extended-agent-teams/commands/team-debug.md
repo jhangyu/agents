@@ -39,11 +39,17 @@ Each hypothesis must include:
 
 Present hypotheses to the user and confirm before spawning agents.
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Phase 3: Investigation
 
 Generate a team name: `debug-{timestamp}`.
 
-Use Teammate tool `spawnTeam`, then spawn agents:
+Use the `TeamCreate` tool with `displayMode: "tmux"` to create the team, enabling real-time inter-agent communication and visibility. Then spawn agents:
 - ONE `extended-agent-teams:team-debugger` per hypothesis (assign one hypothesis per agent)
 - ONE `extended-agent-teams:team-doc-updater` — will document the runbook
 
@@ -140,4 +146,4 @@ Present the full debug report:
 ```
 
 Send `shutdown_request` to all team members.
-Call Teammate cleanup to teardown the team.
+Call `TeamDelete` to teardown the team.

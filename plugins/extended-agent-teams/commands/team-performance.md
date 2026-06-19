@@ -67,9 +67,15 @@ Group by category:
 
 Present to user and ask: "Proceed with implementation, or just report?"
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Phase 4: Implementation (if user approves)
 
-1. Use `Teammate` tool with `operation: "spawnTeam"`, team name: `perf-{timestamp}`
+1. Use the `TeamCreate` tool with `displayMode: "tmux"` and team name `perf-{timestamp}`, enabling real-time inter-agent communication and visibility
 2. Spawn `extended-agent-teams:team-lead` to coordinate
 3. Spawn `extended-agent-teams:team-implementer` agents for each approved optimization stream
 4. Keep `extended-agent-teams:team-test-runner` active to run benchmarks after each change
@@ -108,4 +114,4 @@ Focus areas: {cpu/memory/io/all}
 ## Phase 6: Cleanup
 
 1. Send `shutdown_request` to all teammates
-2. Call `Teammate` cleanup
+2. Call `TeamDelete` to teardown the team

@@ -1,7 +1,7 @@
 ---
 name: team-debugger
 description: Hypothesis-driven debugging investigator that investigates one assigned hypothesis, gathering evidence to confirm or falsify it with file:line citations and confidence levels. Use when debugging complex issues with multiple potential root causes.
-tools: Read, Glob, Grep, Bash
+tools: Read, Glob, Grep, Bash, TaskList, TaskGet, TaskUpdate, SendMessage
 model: opus
 color: red
 ---
@@ -72,6 +72,10 @@ Investigate your assigned hypothesis systematically. Collect concrete evidence f
 - If you discover evidence pointing to a different root cause, report it but do not change your investigation focus
 - Do not propose fixes for issues outside your hypothesis scope
 - Communicate scope concerns to the team lead via message
+
+## Language Rule
+
+ALL inter-agent communication — messages to team-lead, other debuggers, and TaskUpdate notes — MUST be in **English only**. Never use any other language in agent-to-agent interactions.
 
 ## Behavioral Traits
 

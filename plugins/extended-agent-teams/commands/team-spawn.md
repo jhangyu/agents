@@ -150,10 +150,16 @@ If the first argument is `custom`:
 3. Use `--members N` to override the number of any repeatable role (e.g., multiple team-implementers).
 4. Compose the final member list from user selections.
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Team Creation
 
-1. Call Teammate tool `spawnTeam` with the resolved team name and member list.
-2. Call Task tool once per member to assign their initial role context and any relevant instructions.
+1. Use the `TeamCreate` tool with `displayMode: "tmux"` to create the team. The tmux display mode enables real-time inter-agent communication and visibility across all team members.
+2. Call TaskCreate once per member to assign their initial role context and any relevant instructions. All task prompts MUST be written in English.
 3. If `--delegate` is set, include delegation hints in each task prompt: owned files, blockedBy relationships, and acceptance criteria placeholders.
 
 ## Output

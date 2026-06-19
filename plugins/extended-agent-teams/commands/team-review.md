@@ -19,11 +19,17 @@ Gather the full diff or file content. Display a scope summary to the user:
 - Total lines changed (if diff)
 - Review dimensions that will be applied
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Phase 2: Team Spawn
 
 Generate a team name: `review-{timestamp}`.
 
-Spawn agents using Teammate tool `spawnTeam`, then TaskCreate per reviewer.
+Use the `TeamCreate` tool with `displayMode: "tmux"` to create the team, enabling real-time inter-agent communication and visibility. Then use TaskCreate per reviewer.
 
 Default dimensions and agent mapping:
 - `security` → `extended-agent-teams:team-reviewer` with security focus
@@ -108,4 +114,4 @@ Critical: {N} | High: {N} | Medium: {N} | Low: {N}
 Wait for `team-doc-updater` to confirm completion (if writing to file).
 
 Send `shutdown_request` to all team members.
-Call Teammate cleanup to teardown the team.
+Call `TeamDelete` to teardown the team.

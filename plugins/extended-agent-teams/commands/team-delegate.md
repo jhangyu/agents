@@ -3,6 +3,12 @@ description: "Task delegation dashboard for managing team workload, assignments,
 argument-hint: "[team-name] [--assign task-id=member-name] [--message member-name 'content'] [--rebalance] [--flush-docs]"
 ---
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Pre-flight
 
 Parse args for team name and action flags:

@@ -3,6 +3,12 @@ description: "Gracefully shut down an agent team, flush documentation, collect f
 argument-hint: "[team-name] [--force] [--keep-tasks] [--skip-doc-flush]"
 ---
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Phase 1: Pre-Shutdown
 
 1. Parse args: team name, `--force`, `--keep-tasks`, `--skip-doc-flush`
@@ -58,4 +64,4 @@ Tasks remaining: {remaining}
 Docs updated: {list from doc-updater flush}
 ```
 
-Unless `--keep-tasks` is set: call Teammate cleanup to remove the team and task directories under `~/.claude/teams/{team-name}/`.
+Unless `--keep-tasks` is set: call `TeamDelete` to remove the team and task directories under `~/.claude/teams/{team-name}/`.

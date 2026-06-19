@@ -20,6 +20,14 @@ Configure teammate display mode in `~/.claude/settings.json`:
 }
 ```
 
+### Team Creation
+
+All commands that create teams MUST use the `TeamCreate` tool with `displayMode: "tmux"`. This enables real-time inter-agent communication via tmux panes. Team teardown uses `TeamDelete`.
+
+### Language Policy
+
+All inter-agent communication (SendMessage, TaskUpdate, broadcast, task descriptions) uses **English only**. The main agent switches to the user's preferred language (as configured in CLAUDE.md) only when presenting the final summary to the user.
+
 ## Commands
 
 | Command | Description |

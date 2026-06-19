@@ -54,9 +54,15 @@ Orchestrate a parallel refactoring workflow: a code-reviewer identifies issues, 
    ```
    Ask user: "Proceed with full plan, or select specific items?"
 
+## Language Policy
+
+All inter-agent communication — task descriptions, SendMessage between agents, TaskUpdate notes, broadcast messages, and all coordination between the main agent, team-lead, and team members — MUST use **English only**. This applies to every phase of team operation.
+
+The main agent (the agent that invoked this command) uses the user's preferred language (as configured in CLAUDE.md) **only** when presenting the final consolidated summary or report directly to the user.
+
 ## Phase 3: Team Spawn
 
-1. Use `Teammate` tool with `operation: "spawnTeam"`, team name: `refactor-{timestamp}`
+1. Use the `TeamCreate` tool with `displayMode: "tmux"` and team name `refactor-{timestamp}`, enabling real-time inter-agent communication and visibility
 2. Decompose approved plan into work streams with exclusive file ownership (no overlaps)
 3. Spawn `extended-agent-teams:team-lead` to coordinate
 4. For each work stream, spawn `extended-agent-teams:team-implementer`:
@@ -102,4 +108,4 @@ Orchestrate a parallel refactoring workflow: a code-reviewer identifies issues, 
    {list from team-doc-updater}
    ```
 2. Send `shutdown_request` to all teammates
-3. Call `Teammate` cleanup
+3. Call `TeamDelete` to teardown the team
