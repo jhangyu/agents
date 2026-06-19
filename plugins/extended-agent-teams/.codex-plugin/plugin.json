@@ -1,6 +1,6 @@
 {
   "name": "extended-agent-teams",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extended multi-agent orchestration workflows for review, debugging, feature development, refactoring, tech debt, performance, and systems work.",
   "skills": "./skills/",
   "author": {
