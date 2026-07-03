@@ -4,9 +4,9 @@ Refactor code with confidence using comprehensive test safety net:
 
 ## Usage
 
-Use Task tool with subagent_type="tdd-workflows-tdd-orchestrator" to perform safe refactoring.
+Use Task tool with subagent_type="general-purpose" to perform safe refactoring.
 
-Prompt: "Refactor this code while keeping all tests green: $ARGUMENTS. Apply TDD refactor phase:
+Prompt: "Read plugins/extended-agent-teams/roster/tdd-orchestrator.md and fully adopt that role, then: Refactor this code while keeping all tests green: $ARGUMENTS. Apply TDD refactor phase:
 
 ## Core Process
 
@@ -185,3 +185,5 @@ class OrderProcessor {
 **Applied:** Extract Method, Value Objects, Dependency Injection, Async patterns
 
 Code to refactor: $ARGUMENTS"
+
+<!-- source: plugins/tdd-workflows/commands/tdd-refactor.md (thin-router copy, v1.2.0) -->

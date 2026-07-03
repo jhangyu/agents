@@ -675,3 +675,6 @@ class DocCoverage:
 7. **Documentation Site**: Deployed static site with search functionality
 
 Focus on creating documentation that is accurate, comprehensive, and easy to maintain alongside code changes.
+
+<!-- source: plugins/code-documentation/commands/doc-generate.md (thin-router copy, v1.2.0) -->
+<!-- note: plugins/documentation-generation/commands/doc-generate.md is byte-identical; code-documentation chosen as canonical -->

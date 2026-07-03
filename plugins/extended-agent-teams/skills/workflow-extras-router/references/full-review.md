@@ -111,9 +111,10 @@ Run both agents in parallel using multiple Task tool calls in a single response.
 
 ```
 Task:
-  subagent_type: "comprehensive-review-code-reviewer"
+  subagent_type: "general-purpose"
   description: "Code quality analysis for $ARGUMENTS"
   prompt: |
+    Read plugins/extended-agent-teams/skills/workflow-extras-router/references/agent-code-reviewer.md and fully adopt that role, then:
     Perform a comprehensive code quality review.
 
     ## Review Scope
@@ -141,9 +142,10 @@ Task:
 
 ```
 Task:
-  subagent_type: "comprehensive-review-architect-review"
+  subagent_type: "general-purpose"
   description: "Architecture review for $ARGUMENTS"
   prompt: |
+    Read plugins/extended-agent-teams/skills/workflow-extras-router/references/agent-architect-review.md and fully adopt that role, then:
     Review the architectural design and structural integrity of the target code.
 
     ## Review Scope
@@ -198,9 +200,10 @@ Run both agents in parallel using multiple Task tool calls in a single response.
 
 ```
 Task:
-  subagent_type: "comprehensive-review-security-auditor"
+  subagent_type: "general-purpose"
   description: "Security audit for $ARGUMENTS"
   prompt: |
+    Read plugins/extended-agent-teams/roster/security-auditor.md and fully adopt that role, then:
     Execute a comprehensive security audit on the target code.
 
     ## Review Scope
@@ -595,3 +598,5 @@ Comprehensive code review complete for: $ARGUMENTS
 3. Plan High (P1) fixes for current sprint
 4. Add Medium (P2) and Low (P3) items to backlog
 ```
+
+<!-- source: plugins/comprehensive-review/commands/full-review.md (thin-router copy, v1.2.0) -->

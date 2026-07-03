@@ -102,3 +102,5 @@ If tests still fail:
 - Updates test coverage metrics
 - Triggers CI/CD pipeline verification
 - Documents technical debt for tracking
+
+<!-- source: plugins/tdd-workflows/commands/tdd-green.md (thin-router copy, v1.2.0) -->

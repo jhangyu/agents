@@ -35,5 +35,21 @@ This skill is an index. Identify the matching topic below, then Read the referen
 | PR description and review-facilitation | references/pr-enhance.md | Improving PR descriptions, test coverage notes, reviewability |
 | git workflow with quality gates | references/git-workflow.md | Code review through PR creation with gated checks |
 | new-hire onboarding planning | references/onboard.md | 90-day onboarding plans, technical/cultural integration |
+| test suite generation | references/test-generate.md | Generating comprehensive test suites for existing code |
+| mock API server/response generation | references/api-mock.md | Testing against mocked APIs without live dependencies |
+| error message/stack trace analysis | references/error-analysis.md | Diagnosing errors from messages and stack traces |
+| error origin tracing through call stack | references/error-trace.md | Tracing where an error originated through the call chain |
+| distributed request tracing for bugs | references/debug-trace.md | Tracing requests across services to find distributed bugs |
+| multi-agent issue resolution | references/smart-fix.md | Diagnosing, fixing, and verifying an issue end to end |
+| end-to-end performance optimization | references/performance-optimization.md | Profiling and optimizing full application performance |
+| observability stack setup | references/monitor-setup.md | Setting up monitoring stack and dashboards |
+| SQL schema migration planning | references/sql-migrations.md | Planning and generating safe SQL schema migrations |
+| database migration observability | references/migration-observability.md | Instrumenting and monitoring in-flight DB migrations |
+| deployment config validation | references/config-validate.md | Validating deployment configs before rollout |
+| CI/CD workflow automation | references/workflow-automate.md | Automating CI/CD pipelines |
+| data engineering pipeline design | references/data-pipeline.md | Designing and building data pipelines |
+| data-driven feature with A/B testing | references/data-driven-feature.md | 16-step orchestrator for data-driven feature development |
+| full-stack feature orchestration | references/full-stack-feature.md | Multi-agent orchestrator from database to deployment |
+| cross-platform feature build | references/multi-platform.md | Orchestrating a feature build across web/iOS/Android/desktop |
 
 Skipped as duplicate: git-pr-workflows/commands/pr-enhance.md (byte-identical to comprehensive-review's, kept once above).

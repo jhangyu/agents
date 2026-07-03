@@ -13,9 +13,9 @@ make generate HARNESS=gemini
 
 ## What you get
 
-- **156 skills** at `skills/<plugin>__<skill>/SKILL.md` — described in `AGENTS.md`. Describe a task to activate.
-- **192 subagents** at `agents/<plugin>__<agent>.md` — invoke with `@<agent>`.
-- **102 slash commands** at `/<plugin>:<command>` — use `/help` to list.
+- **166 skills** at `skills/<plugin>__<skill>/SKILL.md` — described in `AGENTS.md`. Describe a task to activate.
+- **206 subagents** at `agents/<plugin>__<agent>.md` — invoke with `@<agent>`.
+- **113 slash commands** at `/<plugin>:<command>` — use `/help` to list.
 
 ## Companion Memory Extension
 

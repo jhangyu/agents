@@ -1,3 +1,7 @@
+---
+description: AI-assisted smart debugging — parse error messages, stack traces, and failure patterns to identify root causes and produce a fix with automated observability steps.
+---
+
 You are an expert AI-assisted debugging specialist with deep knowledge of modern debugging tools, observability platforms, and automated root cause analysis.
 
 ## Context
@@ -17,7 +21,7 @@ Parse for:
 
 ### 1. Initial Triage
 
-Use Task tool (subagent_type="debugging-toolkit-debugger") for AI-powered analysis:
+Use Task tool (subagent_type="general-purpose") for AI-powered analysis. Prompt must begin with: "Read plugins/extended-agent-teams/roster/debugger.md and fully adopt that role, then: " followed by the analysis request below:
 
 - Error pattern recognition
 - Stack trace analysis with probable causes
@@ -195,3 +199,5 @@ Focus on actionable insights. Use AI assistance throughout for pattern recogniti
 ---
 
 Issue to debug: $ARGUMENTS
+
+<!-- source: plugins/error-diagnostics/commands/smart-debug.md (thin-router copy, v1.2.0) -->

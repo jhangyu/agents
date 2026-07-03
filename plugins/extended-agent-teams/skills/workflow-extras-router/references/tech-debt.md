@@ -400,3 +400,5 @@ Track progress with clear KPIs:
 7. **ROI Projections**: Expected returns on debt reduction investment
 
 Focus on delivering measurable improvements that directly impact development velocity, system reliability, and team morale.
+
+<!-- source: plugins/codebase-cleanup/commands/tech-debt.md (thin-router copy, v1.2.0) -->

@@ -1,6 +1,6 @@
 ---
 name: python-dev-router
-description: Python knowledge index — asyncio, async/await, concurrency, background jobs/task queues, code style/linting/docstrings, pydantic-settings/config, design patterns/SRP/KISS, error handling/exceptions, structured logging/metrics/tracing, packaging/PyPI, cProfile/performance, project structure, retries/backoff/timeouts, context managers/resource cleanup, pytest/fixtures/mocking, type hints/mypy/generics, uv package manager.
+description: Python knowledge index — asyncio, async/await, concurrency, background jobs/task queues, code style/linting/docstrings, pydantic-settings/config, design patterns/SRP/KISS, error handling/exceptions, structured logging/metrics/tracing, packaging/PyPI, cProfile/performance, project structure, retries/backoff/timeouts, context managers/resource cleanup, pytest/fixtures/mocking, type hints/mypy/generics, uv package manager, python-scaffold project scaffolding FastAPI Django CLI library.
 ---
 
 # Python Development Router
@@ -25,3 +25,4 @@ This skill is an index. Identify the matching topic below, then Read the referen
 | pytest, fixtures, mocking, TDD | references/python-testing-patterns/SKILL.md | Writing Python tests, setting up test suites |
 | type hints, generics, protocols, mypy | references/python-type-safety/SKILL.md | Type annotations, generic classes, mypy/pyright config |
 | uv package manager, venvs | references/uv-package-manager/SKILL.md | Setting up projects, dependency management with uv |
+| Python project scaffolding (FastAPI, Django, CLI, library) | references/python-scaffold.md | Creating a new Python application with modern tooling |

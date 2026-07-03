@@ -95,3 +95,5 @@ After generation:
 - **Special Cases**: Unicode, whitespace, special characters
 - **State**: Invalid transitions, concurrent modifications
 - **Errors**: Network failures, timeouts, permissions
+
+<!-- source: plugins/tdd-workflows/commands/tdd-red.md (thin-router copy, v1.2.0) -->

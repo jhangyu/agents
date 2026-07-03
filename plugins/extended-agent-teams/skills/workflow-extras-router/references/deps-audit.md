@@ -793,3 +793,5 @@ jobs:
 8. **Monitoring Setup**: CI/CD integration for continuous scanning
 
 Focus on actionable insights that help maintain secure, compliant, and efficient dependency management.
+
+<!-- source: plugins/codebase-cleanup/commands/deps-audit.md (thin-router copy, v1.2.0) -->

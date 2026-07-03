@@ -48,7 +48,7 @@ This marketplace follows industry best practices with a focus on granularity, co
 
 ### Component Breakdown
 
-**192 Local Specialized Agents**
+**206 Local Specialized Agents**
 
 - Domain experts with deep knowledge
 - Organized across architecture, languages, infrastructure, quality, data/AI, documentation, business, and SEO
@@ -60,7 +60,7 @@ This marketplace follows industry best practices with a focus on granularity, co
 - Complex operations like full-stack development, security hardening, ML pipelines, incident response
 - Pre-configured agent workflows
 
-**102 Local Commands**
+**113 Local Commands**
 
 - Optimized utilities including:
   - Project scaffolding (Python, TypeScript, Rust)
@@ -69,7 +69,7 @@ This marketplace follows industry best practices with a focus on granularity, co
   - Component scaffolding (React, React Native)
   - Infrastructure setup (Terraform, Kubernetes)
 
-**156 Local Agent Skills**
+**166 Local Agent Skills**
 
 - Modular knowledge packages
 - Progressive disclosure architecture
@@ -194,7 +194,7 @@ description: What the skill does. Use when [trigger]. # Required: < 1024 chars
 - **Composability**: Mix and match skills across workflows
 - **Maintainability**: Isolated updates don't affect other skills
 
-See [Agent Skills](./agent-skills.md) for complete details on the 156 skills.
+See [Agent Skills](./agent-skills.md) for complete details on the 166 skills.
 
 ## Model Configuration Strategy
 
@@ -262,7 +262,7 @@ code-reviewer (Sonnet) validates architecture
 ### Component Coverage
 
 - **100% agent coverage** - all plugins include at least one agent
-- **100% component availability** - all 192 local agents accessible across plugins
+- **100% component availability** - all 206 local agents accessible across plugins
 - **Efficient distribution** - 5.5 components per plugin average
 
 ### Discoverability

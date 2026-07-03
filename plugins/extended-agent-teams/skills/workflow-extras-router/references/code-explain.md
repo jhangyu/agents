@@ -843,3 +843,5 @@ def generate_learning_path(self, analysis):
 8. **Practice Exercises**: Hands-on challenges to reinforce learning
 
 Focus on making complex code accessible through clear explanations, visual aids, and practical examples that build understanding progressively.
+
+<!-- source: plugins/code-documentation/commands/code-explain.md (thin-router copy, v1.2.0) -->

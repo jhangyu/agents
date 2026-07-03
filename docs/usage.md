@@ -202,7 +202,7 @@ Claude Code automatically selects and coordinates the appropriate agents based o
 
 ## Multi-Agent Workflow Examples
 
-Plugins provide pre-configured multi-agent workflows accessible via slash commands.
+Plugins provide pre-configured multi-agent workflows accessible via slash commands. Use `/extended-agent-teams:cmd <command>` to dispatch any team command by short name (e.g., `cmd spawn`, `cmd debug`).
 
 ### Full-Stack Development
 
@@ -385,7 +385,7 @@ User: "Implement Kubernetes deployment with Helm"
 → Result: Production-grade K8s manifests with Helm charts
 ```
 
-See [Agent Skills](./agent-skills.md) for details on the 156 specialized skills.
+See [Agent Skills](./agent-skills.md) for details on the 166 specialized skills.
 
 ## See Also
 

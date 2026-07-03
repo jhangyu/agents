@@ -1,6 +1,6 @@
 ---
 name: backend-dev-router
-description: Backend architecture knowledge index — REST/GraphQL API design, Clean/Hexagonal Architecture, DDD, bounded contexts, CQRS, event sourcing, event store design, microservices, service boundaries, event-driven communication, read models/projections/materialized views, saga pattern, distributed transactions, compensating actions, Temporal workflows, workflow testing.
+description: Backend architecture knowledge index — REST/GraphQL API design, Clean/Hexagonal Architecture, DDD, bounded contexts, CQRS, event sourcing, event store design, microservices, service boundaries, event-driven communication, read models/projections/materialized views, saga pattern, distributed transactions, compensating actions, Temporal workflows, workflow testing, feature-development end-to-end orchestration.
 ---
 
 # Backend Development Router
@@ -18,3 +18,4 @@ This skill is an index. Identify the matching topic below, then Read the referen
 | saga pattern, distributed transactions | references/saga-orchestration/SKILL.md | Cross-service transactions, compensating actions, rollback flows |
 | Temporal workflow testing | references/temporal-python-testing/SKILL.md | Testing Temporal workflows, replay/time-skip testing |
 | durable workflows, workflow vs activity design | references/workflow-orchestration-patterns/SKILL.md | Long-running processes, distributed transactions, orchestration |
+| end-to-end feature development orchestration | references/feature-development.md | Orchestrating requirements → architecture → implementation → testing → deployment |
