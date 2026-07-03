@@ -1,6 +1,6 @@
 ---
 name: team-lead
-description: Team orchestrator that decomposes work into parallel tasks with file ownership boundaries, manages team lifecycle, and synthesizes results. Use when coordinating multi-agent teams, decomposing complex tasks, or managing parallel workstreams.
+description: Decomposes work into parallel tasks with file ownership boundaries, manages team lifecycle, and synthesizes results.
 tools: Read, Glob, Grep, Bash, TaskList, TaskGet, TaskUpdate, SendMessage
 model: opus
 color: blue

@@ -1,6 +1,6 @@
 ---
 name: team-debugger
-description: Hypothesis-driven debugging investigator that investigates one assigned hypothesis, gathering evidence to confirm or falsify it with file:line citations and confidence levels. Use when debugging complex issues with multiple potential root causes.
+description: Investigates one assigned debugging hypothesis, gathering evidence with file:line citations and confidence levels.
 tools: Read, Glob, Grep, Bash, TaskList, TaskGet, TaskUpdate, SendMessage
 model: opus
 color: red

@@ -1,6 +1,6 @@
 ---
 name: cpp-pro
-description: Write idiomatic C++ code with modern language features, RAII, smart pointers, STL algorithms, and clear API boundaries. Handles templates, move semantics, large-scale refactoring, ABI-sensitive code, and performance optimization. Use PROACTIVELY for C++ modernization, memory safety, or complex language and build-system patterns.
+description: Writes idiomatic modern C++ (RAII, smart pointers, templates, move semantics) for performance-critical code.
 model: opus
 ---
 

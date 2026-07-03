@@ -1,6 +1,6 @@
 ---
 name: c-pro
-description: Write efficient C code with disciplined memory management, pointer arithmetic, low-level system APIs, and portable systems code. Handles embedded systems, kernel-adjacent work, performance-critical paths, and unsafe C boundaries. Use PROACTIVELY for C optimization, memory issues, toolchain tuning, or systems programming.
+description: Writes efficient C with disciplined memory management, pointer arithmetic, and system APIs for embedded/critical code.
 model: opus
 ---
 

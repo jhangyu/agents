@@ -1,6 +1,6 @@
 ---
 name: team-test-runner
-description: Mechanical test executor that runs exactly the commands specified by team-implementer or team-lead, captures output, and reports PASS/FAIL/PARTIAL results. Use when an implementer needs test or build commands executed and results reported without any code modification.
+description: Runs exact test/build commands given by team-implementer or team-lead and reports PASS/FAIL/PARTIAL results.
 tools: Bash, Read, TaskList, TaskGet, TaskUpdate, SendMessage
 model: haiku
 color: cyan

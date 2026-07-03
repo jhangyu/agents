@@ -1,6 +1,6 @@
 ---
 name: team-reviewer
-description: Multi-dimensional code reviewer that operates on one assigned review dimension (security, performance, architecture, testing, or accessibility) with structured finding format. Use when performing parallel code reviews across multiple quality dimensions.
+description: Reviews one assigned dimension (security, performance, architecture, testing, accessibility) with structured findings.
 tools: Read, Glob, Grep, Bash, TaskList, TaskGet, TaskUpdate, SendMessage
 model: opus
 color: green

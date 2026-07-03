@@ -1,7 +1,7 @@
 {
   "name": "extended-agent-teams",
-  "version": "1.0.1",
-  "description": "Extended multi-agent orchestration with refactor, tech-debt, performance workflows and specialized language agents",
+  "version": "1.1.0",
+  "description": "Extended multi-agent orchestration: team workflows, specialized language agents, 6 domain router skills (python/js-ts/backend/security/systems/workflow-extras), 115-role expert roster with thin routing",
   "author": {
     "name": "local"
   },

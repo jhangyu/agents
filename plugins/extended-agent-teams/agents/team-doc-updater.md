@@ -1,6 +1,6 @@
 ---
 name: team-doc-updater
-description: Documentation maintenance agent that updates README, CHANGELOG, API docs, and architecture docs when team-lead broadcasts a checkpoint summary. Use to offload documentation work during multi-agent feature builds.
+description: Updates README, CHANGELOG, API docs, architecture docs from team-lead checkpoint summaries during multi-agent builds.
 tools: Read, Write, Edit, Glob, Grep, TaskList, TaskGet, TaskUpdate, SendMessage
 model: sonnet
 color: magenta

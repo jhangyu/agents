@@ -1,6 +1,6 @@
 ---
 name: legacy-modernizer
-description: Refactor legacy codebases, migrate outdated frameworks, and implement gradual modernization. Handles technical debt, dependency updates, and backward compatibility. Use PROACTIVELY for legacy system updates, framework migrations, or technical debt reduction.
+description: Refactors legacy codebases, migrates outdated frameworks, and handles technical debt and backward compatibility.
 model: sonnet
 ---
 
