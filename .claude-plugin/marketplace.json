@@ -1151,7 +1151,7 @@
     {
       "name": "extended-agent-teams",
       "description": "Extended multi-agent orchestration with refactor, tech-debt, performance workflows and specialized language agents",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "author": {
         "name": "jhangyu"
       },
