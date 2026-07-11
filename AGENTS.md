@@ -48,7 +48,7 @@ make generate HARNESS=gemini     # skills/, agents/, commands/ at extension root
 make generate-all                # all four
 ```
 
-Generated artifacts are **committed** so each harness installs natively from a clone / GitHub URL (native-install commands in [`docs/harnesses.md`](docs/harnesses.md)). Run `make generate-all` before committing source changes — CI fails on drift. Source-of-truth lives only under `plugins/`; never hand-edit generated files.
+Only the marketplace/manifest artifacts are **committed** (`.cursor-plugin/`, `.agents/plugins/`, per-plugin `.codex-plugin/plugin.json`); the transformed trees (`.codex/`, `.opencode/`, `opencode.json`, root-level `skills/`, `agents/`, `commands/`) are gitignored and regenerated locally — each harness installs via clone + `make generate HARNESS=<name>` (native-install commands in [`docs/harnesses.md`](docs/harnesses.md)). Run `make generate-all` before committing source changes — CI fails on drift in the committed artifacts. Source-of-truth lives only under `plugins/`; never hand-edit generated files.
 
 ## Skills (cross-harness)
 
