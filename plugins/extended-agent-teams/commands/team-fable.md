@@ -15,16 +15,17 @@ role — only the main agent can reach the user.
 ```
 User
  └─ Orchestrator (main agent) — direction, round decisions, reviewer dispatch, user reporting
-     ├─ Squad A
-     │   ├─ squadA-lead        team-lead         model: opus
-     │   ├─ squadA-impl-1..N   team-implementer  model: sonnet (opus for judgment-dense work)
-     │   └─ squadA-test        team-test-runner  model: haiku
-     └─ Squad B (same shape)   [Squad C only if task width truly requires it]
+     ├─ Squad {purpose1}
+     │   ├─ squad{purpose1}-lead        team-lead         model: opus
+     │   ├─ squad{purpose1}-impl-1..N   team-implementer  model: sonnet (opus for judgment-dense work)
+     │   └─ squad{purpose1}-test        team-test-runner  model: haiku
+     └─ Squad {purpose2} (same shape)   [Squad C only if task width truly requires it]
 ```
 
 Teams are **flat** — squads are a logical grouping enforced by the communication protocol
-embedded in every member's task prompt, not by the harness. Name members with a squad prefix
-(`squadA-lead`, `squadA-impl-1`, `squadA-test`) so routing rules are unambiguous.
+embedded in every member's task prompt, not by the harness. Name members with a purpose-based
+squad prefix (`squad{purpose}-lead`, `squad{purpose}-impl-1`, `squad{purpose}-test`, e.g.
+`squadApi-lead`) so routing rules are unambiguous.
 
 ## Pre-flight
 
