@@ -9,6 +9,11 @@ Roster files live at ../../roster/ relative to this SKILL.md. To use a role: Rea
 
 Roles are grouped by theme (backend/security/testing first, niche last); each roster file is one self-contained agent definition even when a row lists several.
 
+## When to Use
+
+- Composing a team and picking which specialist roles to include
+- Delegating a task that needs domain expertise not covered by the registered agent list
+
 See `references/details.md` for the full role table (specialty and roster path per role, covering
 backend/API, security, testing/debugging, deployment/cloud, database, docs, frontend/mobile,
 language specialists, data/ML, and niche domains).
