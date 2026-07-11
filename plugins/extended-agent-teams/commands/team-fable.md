@@ -57,7 +57,10 @@ A **round** = one milestone. Round-end condition (all three, mechanically checke
 3. Create **one git worktree per squad**. Squads never share a working tree.
 4. Assign models: squad lead = `opus`; implementers = `sonnet` by default, `opus` for
    judgment-dense subtasks (architecture, tricky algorithms, security-sensitive paths);
-   test-runner = `haiku`.
+   test-runner = `haiku`. Work packages touching authn/authz, secrets, crypto, or input
+   validation get `opus` implementers, and that squad's Phase 3 review is a
+   maximum-thoroughness security pass (probe abuse cases and trust-boundary bypasses,
+   not just functional edges).
 5. Output the allocation plan (squads, members, models, file ownership, worktree paths)
    before spawning.
 
@@ -65,9 +68,12 @@ A **round** = one milestone. Round-end condition (all three, mechanically checke
 
 1. `TeamCreate` with `displayMode: "tmux"`.
 2. Spawn **all** members from the orchestrator (squad leads never spawn agents).
-3. `TaskCreate` per member. Every task prompt MUST embed the **Communication Protocol**
-   and **Git Red Lines** blocks below, the member's file ownership list, worktree path,
-   acceptance criteria, and paths to prior-round handoff docs (if any).
+3. `TaskCreate` per squad member. Every squad member prompt MUST embed the
+   **Communication Protocol** and **Git Red Lines** blocks below, the member's file
+   ownership list, worktree path, acceptance criteria, and paths to prior-round handoff
+   docs (if any). Every member prompt must require that progress claims are audited
+   against actual tool output before being reported — claims not backed by tool evidence
+   are invalid.
 
 #### Communication Protocol (embed verbatim in every member prompt)
 
@@ -83,6 +89,11 @@ A **round** = one milestone. Round-end condition (all three, mechanically checke
 - **Escalation**: if the same subtask fails twice (same root cause), STOP retrying. The squad
   lead escalates to the orchestrator with the full failure trace (attempts, error output,
   current state). The orchestrator decides: re-scope, upgrade model, or ask the user.
+- **Long-running processes**: never babysit. Launch detached (nohup + log file), sanity-check
+  once, then report PID + log path to your squad lead and yield. Repeated polling of a
+  still-running process is the signal to stop and report instead. A detached launch is a
+  handoff, not a completed verification.
+- A precise "blocked because X" report is a successful outcome; a guessed implementation is not.
 
 #### Git Red Lines (embed verbatim in every member prompt)
 
@@ -91,12 +102,30 @@ A **round** = one milestone. Round-end condition (all three, mechanically checke
 - Commit ONLY with explicit `git add <your-own-files>`. Never `git add -A` / `git add .`.
 - Never touch files outside your ownership list. Never force-push.
 
+#### Verification Protocol (embed verbatim in reviewer prompts)
+
+- **Adversarial framing**: assume the work is broken until evidence says otherwise. Your job
+  is to actively REFUTE the squad's claim — not confirm it.
+- **Self-produced evidence**: reproduce test runs and exercise the changed flow yourself.
+  The implementer's or test-runner's own output is a claim, not evidence.
+- **Negative-space question** (mandatory): "what existing behavior does this diff remove or
+  stop handling, and who depends on it?" Read the diff for what it *doesn't* handle, not
+  just what it does.
+- **Verdict format**: **CONFIRMED** — every claim checked against evidence you produced
+  yourself; list what you ran and observed. **REFUTED** — one concrete reproducible
+  counterexample: exact inputs/state, expected vs actual, where it breaks.
+- **Independence**: never fix anything — not even one line. Fixes route back to the
+  originating squad lead. Independence is the reviewer's entire value.
+
 ### Phase 3 — Execute & Review
 
 1. The orchestrator receives squad-lead summaries only; it does not micro-manage members.
 2. When a squad reports its work package complete (with test-runner PASS evidence), the
-   orchestrator decides whether to dispatch an **opus reviewer** (`team-reviewer`, one per
-   squad under review) scoped to that squad's diff.
+   orchestrator dispatches an **opus reviewer** (`team-reviewer`, one per squad under
+   review) scoped to that squad's diff. The reviewer works **read-only in the squad's
+   existing worktree** — no new worktree, no file ownership list. Its task prompt embeds
+   the **Verification Protocol** and **Git Red Lines** blocks verbatim (not the
+   Communication Protocol). The reviewer reports its verdict ONLY to the orchestrator.
 3. Reviewer issues go back to the originating squad lead for fixes, then re-review.
    **Maximum 2 review→fix cycles per squad per round.** Still failing after 2 cycles →
    stop, report the failure trace to the user, and wait for direction.

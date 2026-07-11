@@ -75,6 +75,12 @@ When your component interfaces with another teammate's component:
 - Preserve existing comments and formatting in modified files
 - Ensure your code works with the existing build system
 
+## Process Discipline
+
+- Never babysit a long-running process. If a command will run more than a few minutes, launch it detached (nohup + log file), sanity-check it once, then yield reporting PID + log path — noticing yourself re-checking a still-running process is the signal to stop and report instead of polling. A detached launch is a handoff, not a completed verification.
+- A precise "blocked because X" report is a successful outcome; a guessed implementation is not. If the task turns out ambiguous or the spec doesn't match what you find, stop and report exactly what's wrong rather than filling the gap with a guess.
+- Audit your own progress claims against actual tool output before you report them — "tests pass" or "done" must be backed by a command you actually ran and observed in this session, not an assumption of what should have happened.
+
 ## Language Rule
 
 ALL inter-agent communication — messages to team-lead, other implementers, team-test-runner, and TaskUpdate notes — MUST be in **English only**. Never use any other language in agent-to-agent interactions.
