@@ -1,6 +1,6 @@
 ---
 name: python-dev-router
-description: Python knowledge index — asyncio, async/await, concurrency, background jobs/task queues, code style/linting/docstrings, pydantic-settings/config, design patterns/SRP/KISS, error handling/exceptions, structured logging/metrics/tracing, packaging/PyPI, cProfile/performance, project structure, retries/backoff/timeouts, context managers/resource cleanup, pytest/fixtures/mocking, type hints/mypy/generics, uv package manager, python-scaffold project scaffolding FastAPI Django CLI library.
+description: Use when the task involves Python development. Python knowledge index — asyncio, async/await, concurrency, background jobs/task queues, code style/linting/docstrings, pydantic-settings/config, design patterns/SRP/KISS, error handling/exceptions, structured logging/metrics/tracing, packaging/PyPI, cProfile/performance, project structure, retries/backoff/timeouts, context managers/resource cleanup, pytest/fixtures/mocking, type hints/mypy/generics, uv package manager, python-scaffold project scaffolding FastAPI Django CLI library.
 ---
 
 # Python Development Router

@@ -1,6 +1,6 @@
 ---
 name: backend-dev-router
-description: Backend architecture knowledge index — REST/GraphQL API design, Clean/Hexagonal Architecture, DDD, bounded contexts, CQRS, event sourcing, event store design, microservices, service boundaries, event-driven communication, read models/projections/materialized views, saga pattern, distributed transactions, compensating actions, Temporal workflows, workflow testing, feature-development end-to-end orchestration.
+description: Use when the task involves backend architecture. Backend architecture knowledge index — REST/GraphQL API design, Clean/Hexagonal Architecture, DDD, bounded contexts, CQRS, event sourcing, event store design, microservices, service boundaries, event-driven communication, read models/projections/materialized views, saga pattern, distributed transactions, compensating actions, Temporal workflows, workflow testing, feature-development end-to-end orchestration.
 ---
 
 # Backend Development Router

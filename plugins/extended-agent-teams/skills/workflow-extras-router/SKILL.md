@@ -1,6 +1,6 @@
 ---
 name: workflow-extras-router
-description: Extras index for disabled plugins — AngularJS/Angular, database/ORM migration, major dependency upgrades, React hooks modernization, strangler-fig legacy modernization, multi-reviewer/parallel-debugging/parallel-feature/task-coordination/team-communication/team-composition patterns for agent teams, TDD red/green/refactor/cycle, code explanation, doc generation, AI-assisted debugging, dependency/tech-debt audits, full multi-dimensional code review, git workflow with quality gates, PR enhancement, team onboarding.
+description: Use when the task matches one of these disabled-plugin workflows. Extras index for disabled plugins — AngularJS/Angular, database/ORM migration, major dependency upgrades, React hooks modernization, strangler-fig legacy modernization, multi-reviewer/parallel-debugging/parallel-feature/task-coordination/team-communication/team-composition patterns for agent teams, TDD red/green/refactor/cycle, code explanation, doc generation, AI-assisted debugging, dependency/tech-debt audits, full multi-dimensional code review, git workflow with quality gates, PR enhancement, team onboarding.
 ---
 
 # Workflow Extras Router

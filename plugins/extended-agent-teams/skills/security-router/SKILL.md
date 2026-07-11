@@ -1,6 +1,6 @@
 ---
 name: security-router
-description: Security knowledge index — attack trees, threat paths, SAST tool configuration, DevSecOps vulnerability scanning, security requirements from threat models, security user stories, STRIDE methodology, threat modeling sessions, threat-to-control mapping, mitigation prioritization, remediation planning, dependency vulnerability scanning SBOM supply chain, security hardening defense-in-depth compliance, static analysis Bandit Semgrep CodeQL, XSS scanning frontend/mobile, compliance checks GDPR/SOC2/HIPAA.
+description: Use when the task involves security analysis or hardening. Security knowledge index — attack trees, threat paths, SAST tool configuration, DevSecOps vulnerability scanning, security requirements from threat models, security user stories, STRIDE methodology, threat modeling sessions, threat-to-control mapping, mitigation prioritization, remediation planning, dependency vulnerability scanning SBOM supply chain, security hardening defense-in-depth compliance, static analysis Bandit Semgrep CodeQL, XSS scanning frontend/mobile, compliance checks GDPR/SOC2/HIPAA.
 ---
 
 # Security Router

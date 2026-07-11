@@ -1,6 +1,6 @@
 ---
 name: systems-router
-description: Systems programming knowledge index — Go goroutines/channels/sync primitives/worker pools/race conditions, memory-safe RAII/ownership/smart pointers across Rust/C++/C, Rust async/Tokio/async traits/concurrent patterns. Also routes C++ project scaffolding to the native cpp-project skill.
+description: Use when the task involves systems programming. Systems programming knowledge index — Go goroutines/channels/sync primitives/worker pools/race conditions, memory-safe RAII/ownership/smart pointers across Rust/C++/C, Rust async/Tokio/async traits/concurrent patterns. Also routes C++ project scaffolding to the native cpp-project skill.
 ---
 
 # Systems Programming Router

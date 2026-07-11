@@ -1,6 +1,6 @@
 ---
 name: js-ts-dev-router
-description: JavaScript/TypeScript knowledge index — Jest, Vitest, Testing Library, unit/integration/e2e tests, mocking, TDD/BDD, ES6+, async/await, destructuring, promises, generators, functional patterns, Node.js backend, Express/Fastify, middleware, REST/GraphQL APIs, TypeScript generics, conditional/mapped types, template literals, utility types, typescript-scaffold project scaffolding Next.js React Vite pnpm, frontend UI component scaffolding.
+description: Use when the task involves JavaScript or TypeScript development. JavaScript/TypeScript knowledge index — Jest, Vitest, Testing Library, unit/integration/e2e tests, mocking, TDD/BDD, ES6+, async/await, destructuring, promises, generators, functional patterns, Node.js backend, Express/Fastify, middleware, REST/GraphQL APIs, TypeScript generics, conditional/mapped types, template literals, utility types, typescript-scaffold project scaffolding Next.js React Vite pnpm, frontend UI component scaffolding.
 ---
 
 # JavaScript/TypeScript Development Router
