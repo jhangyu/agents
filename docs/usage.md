@@ -202,7 +202,7 @@ Claude Code automatically selects and coordinates the appropriate agents based o
 
 ## Multi-Agent Workflow Examples
 
-Plugins provide pre-configured multi-agent workflows accessible via slash commands. Use `/extended-agent-teams:cmd <command>` to dispatch any team command by short name (e.g., `cmd spawn`, `cmd debug`).
+Plugins provide pre-configured multi-agent workflows accessible via slash commands. Use `/extended-agent-teams:team-router <name> [args]` to dispatch a consolidated command from disabled plugins by short name (e.g., `team-router python-scaffold`, `team-router security-sast`).
 
 ### Full-Stack Development
 

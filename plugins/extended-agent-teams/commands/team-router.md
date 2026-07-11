@@ -1,9 +1,9 @@
 ---
-description: "Run a consolidated command from disabled plugins: /cmd <name> [args] — scaffolds, security scans, migrations."
+description: "Run a consolidated command from disabled plugins: /team-router <name> [args] — scaffolds, security scans, migrations."
 argument-hint: "<command-name> [arguments...]"
 ---
 
-# /cmd — Consolidated Command Dispatcher
+# /team-router — Consolidated Command Dispatcher
 
 Parse `$ARGUMENTS`: the **first token** is the command name; everything after it is the **payload**.
 
@@ -57,6 +57,6 @@ If the name is missing or not in the index, print the available commands table b
 
 The payload (all tokens after the command name) becomes the target command's `$ARGUMENTS` verbatim. Examples:
 
-- `/cmd python-scaffold my-api --framework fastapi` reads `python-scaffold.md` and executes with `$ARGUMENTS = "my-api --framework fastapi"`
-- `/cmd security-sast ./src` reads `security-sast.md` and executes with `$ARGUMENTS = "./src"`
-- `/cmd` (empty) prints the command index above
+- `/team-router python-scaffold my-api --framework fastapi` reads `python-scaffold.md` and executes with `$ARGUMENTS = "my-api --framework fastapi"`
+- `/team-router security-sast ./src` reads `security-sast.md` and executes with `$ARGUMENTS = "./src"`
+- `/team-router` (empty) prints the command index above
