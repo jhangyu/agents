@@ -98,6 +98,10 @@ All inter-agent communication (SendMessage, TaskUpdate, broadcast, task descript
 
 Supported ecosystems: npm/yarn/pnpm, pytest/unittest, cargo, go test, make/cmake, gradle/maven
 
+## Compatibility
+
+Do not enable `extended-agent-teams` together with `agent-teams` or `systems-programming`. This plugin bundles enhanced supersets of their agents under the same names (`team-lead`, `team-implementer`, `team-reviewer`, `team-debugger`, `c-pro`, `cpp-pro`, `golang-pro`, `rust-pro`), which would collide if co-enabled. Use this plugin as a drop-in replacement for both.
+
 ## How team-doc-updater Works
 
 `team-doc-updater` is also a **reactive** agent:

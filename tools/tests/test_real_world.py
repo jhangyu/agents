@@ -45,6 +45,20 @@ _TRIGGER_PATTERN = re.compile(
 # Codex built-in agent names that custom agents must NOT collide with.
 _CODEX_BUILTIN_AGENTS = {"default", "worker", "explorer"}
 
+# extended-agent-teams is a superset alternative to agent-teams and systems-programming,
+# mutually exclusive by design (see plugins/extended-agent-teams/README.md).
+# These 8 agents intentionally share names across the listed plugin pairs.
+KNOWN_SHADOWED_AGENTS: dict[str, frozenset[str]] = {
+    "team-lead": frozenset({"agent-teams", "extended-agent-teams"}),
+    "team-implementer": frozenset({"agent-teams", "extended-agent-teams"}),
+    "team-reviewer": frozenset({"agent-teams", "extended-agent-teams"}),
+    "team-debugger": frozenset({"agent-teams", "extended-agent-teams"}),
+    "c-pro": frozenset({"systems-programming", "extended-agent-teams"}),
+    "cpp-pro": frozenset({"systems-programming", "extended-agent-teams"}),
+    "golang-pro": frozenset({"systems-programming", "extended-agent-teams"}),
+    "rust-pro": frozenset({"systems-programming", "extended-agent-teams"})
+}
+
 # Multi-agent command workflows use phase placeholders such as
 # `{phase3.agent-name.output}`. The task key must match the producing
 # `subagent_type`, otherwise later phases cannot read earlier outputs.
@@ -165,7 +179,15 @@ class TestPluginSourceIntegrity:
                 if name:
                     by_name.setdefault(name, []).append(f"{plugin_name}/agents/{agent.name}.md")
 
-        duplicates = {name: paths for name, paths in sorted(by_name.items()) if len(paths) > 1}
+        duplicates = {}
+        for name, paths in sorted(by_name.items()):
+            if len(paths) <= 1:
+                continue
+            plugins = frozenset(path.split("/")[0] for path in paths)
+            if plugins == KNOWN_SHADOWED_AGENTS.get(name):
+                continue
+            duplicates[name] = paths
+
         assert not duplicates, "Duplicate agent frontmatter names:\n  " + "\n  ".join(
             f"{name}: {', '.join(paths)}" for name, paths in duplicates.items()
         )
